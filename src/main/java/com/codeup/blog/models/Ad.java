@@ -1,11 +1,11 @@
 package com.codeup.blog.models;
 
-public class Ads {
+public class Ad {
     private String title;
     private String description;
 
     //constructor
-    public Ads(String title, String description){
+    public Ad(String title, String description){
         this.title = title;
         this.description = description;
     }
@@ -14,15 +14,15 @@ public class Ads {
         return description;
     }
 
-    public void setDescription(String title){
-
-    }
-
     public String getTitle(){
-        return this.title= title;
+        return title;
     }
 
-    public void setTitle(String decription){
+    public void setDescription(String description){
+        this.description = description;
+    }
 
+    public void setTitle(String title){
+        this.title = title;
     }
 }
