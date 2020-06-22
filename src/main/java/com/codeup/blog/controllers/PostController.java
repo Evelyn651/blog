@@ -11,10 +11,10 @@ public class PostController {
         return "posts index page";
     }
 
-    @GetMapping(path = "/posts/{post}")
+    @GetMapping(path = "/posts/{id}")
     @ResponseBody
-    public String posts(@PathVariable String post) {
-        return "view an individual post";
+    public String posts(@PathVariable int id) {
+        return "view an individual post: " + id;
     }
 
     @GetMapping(path = "/posts/create")
@@ -23,7 +23,7 @@ public class PostController {
         return "view the form for creating a post";
     }
 
-    @RequestMapping(path = "/posts/create")
+    @PostMapping(path = "/posts/create")
     @ResponseBody
     public String postPosts() {
         return "create a new post";

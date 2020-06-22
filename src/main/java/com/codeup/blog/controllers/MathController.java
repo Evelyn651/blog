@@ -11,10 +11,10 @@ public class MathController {
         return numberOne + " + " + numberTwo + " = " + (numberOne + numberTwo) ;
     }
 
-    @GetMapping(path = "/subtract/{numberOne}/and/{numberTwo}")
+    @GetMapping(path = "/subtract/{numberOne}/from/{numberTwo}")
     @ResponseBody
     public String subtract(@PathVariable double numberOne, @PathVariable double numberTwo){
-        return numberOne + " - " + numberTwo + " = " + (numberOne - numberTwo);
+        return numberOne + " - " + numberTwo + " = " + (numberTwo - numberOne);
     }
 
     @GetMapping(path = "/multiply/{numberOne}/and/{numberTwo}")
