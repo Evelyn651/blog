@@ -51,7 +51,7 @@ public class AdsController {
     @ResponseBody
     public String save() {
         User currentUser = usersDao.getOne(1L);
-        Ad newAd = new Ad("XBOX X", "brand new", currentUser, null, null);
+        Ad newAd = new Ad("XBOX X", "brand new", currentUser,null, null);
         adsDao.save(newAd);
         return "create a new ad";
     }
