@@ -24,9 +24,6 @@ public class AdsController {
     @GetMapping(".ads")
     public String index(Model model) {
 
-        Ad firstAd = adsDao.findFirstByTitle("psvista");
-        System.out.println("firstAd.getId()= " + firstAd.getId());
-
         List<Ad> adsList = adsDao.findAll();
         model.addAttribute("noAdsFound", adsList.size() == 0);
         model.addAttribute("ads", adsList);
